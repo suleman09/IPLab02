@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Customized TShirts</title>
+
+
+  </head>
+  <style>
+           * {
+               font-family: "Poppins", sans-serif;
+           }
+
+           .title {
+               font-size: x-large;
+               font-weight: 700;
+           }
+
+           .content {
+               display: flex;
+               margin: 0 7%;
+           }
+
+           .content > * {
+               flex: 1;
+           }
+
+           .content > img {
+               width: 100px;
+               height: 800px;
+           }
+
+           #orderBtn {
+               position: relative;
+               background-color: black;
+               border: none;
+               padding: 20px;
+               width: 200px;
+               text-align: center;
+               -webkit-transition-duration: 0.4s;
+               transition-duration: 0.4s;
+               text-decoration: none;
+               overflow: hidden;
+               cursor: pointer;
+               color: white;
+           }
+
+           #orderBtn:hover {
+               background: #fff;
+               box-shadow: 0px 2px 10px 5px #97b1bf;
+               color: #000;
+           }
+
+           #orderBtn:after {
+               content: "";
+               background: black;
+               display: block;
+               position: absolute;
+               padding-top: 300%;
+               padding-left: 350%;
+               margin-left: -20px !important;
+               margin-top: -120%;
+               opacity: 0;
+               transition: all 0.8s;
+           }
+
+           #orderBtn:active:after {
+               padding: 0;
+               margin: 0;
+               opacity: 1;
+               transition: 0s;
+           }
+           body{
+             background-image: linear-gradient(#804FB3, #552586, #804FB3);
+           }
+           hr{
+             border-style: none;
+             border-top-style: dotted;
+             border-color: grey;
+             border-width: 5px;
+             width: 5%;
+             color: #cccccc;
+           }
+            label{
+              color: #fffffc;
+               }
+
+       </style>
+  <body>
+  <h1 align="center">Customize you T-shirt here</h1>
+  <hr>
+
+  <div align="center" class="form">
+    <form class="myForm" method="get">
+    <br>
+    <label>Name
+    <input type="text" name="customer_name" required>
+    </label>
+    <br>
+    <br>
+    <label>Mobile no.
+    <input type="tel" name="phone_number">
+    </label>
+    <br>
+    <br>
+    <label>Mail ID
+    <input type="email" name="email_address">
+    </label>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br/>
+
+    <fieldset>
+    <label>Size</label>
+    <br>
+    <br />
+    <input type="radio" name="Small" > Small</input>
+    <input type="radio" name="Medium" > Medium</input>
+    <input type="radio" name="Large" > Large</input>
+    <input type="radio" name="Large" > Extra Large</input>
+    <br><br>
+    <label>Colour
+    <br>
+    <input type="text" name="Colour" required>
+    </label>
+    <br>
+    <br><br>
+    <label>Tagline (If any)
+    <br>
+    <input type="text" name="Colour" required>
+    </label>
+    <br>
+    <br><br>
+    <label>Quantity
+    <br>
+    <input type="text" name="Quantity" required>
+    </label>
+    <br>
+    <br>
+    </fieldset>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br/>
+    <p>
+    <label>Shipping Details
+      <br>
+      <br>
+    <input type="datetime-local" name="delivery_time" required>
+    </label>
+    </p>
+    <br>
+    <label>Address
+      <input type="text" name="Address">
+    </label>
+    <br><br>
+    <label>City
+      <input type="text" name="state" required list="destinations">
+    </label>
+
+    <datalist id="destinations">
+    <option value="Mumbai">
+    <option value="Delhi">
+    <option value="Pune">
+    </datalist>
+    <br><br>
+    <label>Pincode
+      <input type="text" name="tag">
+    </label>
+    <p><button id= 'orderBtn'>Place your Order </button></p>
+
+    </form>
+  </div>
+
+
+  </body>
+</html>
